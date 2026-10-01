@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Chrono Splice</title>
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="game-wrap">
+    <h1>Chrono Splice</h1>
+    <div id="canvas-wrap">
+      <canvas id="game" width="1040" height="800"></canvas>
+
+      <div id="overlay-start" class="overlay">
+        <div class="panel">
+          <h2>Chrono Splice</h2>
+          <p>Run through each level, then press <b>L</b> to loop — your run is saved as a ghostly <b>Echo</b> that replays itself from the start. Use your Echo (and yourself) together to press pressure plates and open doors.</p>
+          <p id="continue-note" class="hint-sub"></p>
+          <div class="controls-list">
+            <div><kbd>&larr;</kbd><kbd>&rarr;</kbd> / <kbd>A</kbd><kbd>D</kbd> Move</div>
+            <div><kbd>&uarr;</kbd> / <kbd>W</kbd> / <kbd>Space</kbd> Jump</div>
+            <div><kbd>L</kbd> Loop (bank your Echo &amp; restart)</div>
+            <div><kbd>E</kbd> Splice (swap control on glowing gates)</div>
+            <div><kbd>R</kbd> Restart attempt</div>
+          </div>
+          <button id="btn-start" class="big-btn">Press SPACE / Tap to Start</button>
+        </div>
+      </div>
+
+      <div id="overlay-complete" class="overlay hidden">
+        <div class="panel">
+          <h2>Level Complete!</h2>
+          <p id="complete-text"></p>
+        </div>
+      </div>
+
+      <div id="overlay-win" class="overlay hidden">
+        <div class="panel">
+          <h2>All Timelines Spliced</h2>
+          <p>You guided your past and present selves through every paradox. Well done!</p>
+          <button id="btn-replay" class="big-btn">Play Again</button>
+        </div>
+      </div>
+
+      <div id="hud">
+        <div id="hud-level"></div>
+        <div id="hud-hint"></div>
+        <div id="hud-status"></div>
+      </div>
+    </div>
+
+    <div id="touch-controls">
+      <div class="touch-row">
+        <button id="t-left" class="t-btn">&larr;</button>
+        <button id="t-right" class="t-btn">&rarr;</button>
+        <button id="t-jump" class="t-btn wide">JUMP</button>
+      </div>
+      <div class="touch-row">
+        <button id="t-loop" class="t-btn wide">LOOP (L)</button>
+        <button id="t-splice" class="t-btn wide">SPLICE (E)</button>
+        <button id="t-restart" class="t-btn">R</button>
+      </div>
+    </div>
+  </div>
+  <script src="./game.js"></script>
+</body>
+</html>
